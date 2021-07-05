@@ -1,0 +1,54 @@
+.mainHeader {
+  padding: 10px 50px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+}
+
+.mainHeader__brandLogo {
+  width: 130px;
+  object-fit: contain;
+  margin: 0 30px;
+}
+.mainHeader__search {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.mainHeader__search > input {
+  border: none;
+  padding: 13px 19px;
+  background-color: #f5f5f5;
+  width: 100%;
+  line-height: 1.4;
+  color: #212121;
+  font-weight: 500;
+  border-radius: 2px;
+}
+
+.mainHeader__search > input:focus {
+  outline: none;
+}
+
+.mainHeader__search__icon {
+  background-color: #f36f36;
+  height: 48px !important;
+  width: 45px !important;
+  padding: 10px;
+  color: white;
+}
+
+.mainHeader__right__voucherLogo {
+  width: 50%;
+}
+
+.mainHeader__right {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.mainHeader__right__cartIcon {
+  height: 35px !important;
+  width: 35px !important;
+}

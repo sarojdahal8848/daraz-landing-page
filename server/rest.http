@@ -1,0 +1,24 @@
+###universal route
+GET http://localhost:5000/
+
+
+###get all product route
+GET http://localhost:5000/product
+
+
+###get single product route
+GET http://localhost:5000/product/60ca10f6a87687065ceb9380
+
+
+###create product  route
+POST  http://localhost:5000/product
+
+
+###product updating route
+PUT http://localhost:5000/product/60ca10f6a87687065ceb9380
+
+
+
+
+###product deleting route
+DELETE http://localhost:5000/

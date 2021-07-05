@@ -1,0 +1,36 @@
+.collection {
+  width: 25%;
+  background-color: white;
+  text-align: center;
+  padding: 10px 15px;
+  margin-right: 2px;
+  margin-bottom: 2px;
+  cursor: pointer;
+}
+
+.collection:hover {
+  box-shadow: 0px 4px 4px 0 rgb(204, 202, 202);
+}
+
+.collection > h5 {
+  font-size: 16px;
+  margin-bottom: 0px;
+}
+
+.collection > span {
+  font-size: 12px;
+  margin-left: -5px;
+  color: gray;
+  font-weight: 500;
+}
+
+.collection__images {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.collection__images > img {
+  width: 60px;
+}

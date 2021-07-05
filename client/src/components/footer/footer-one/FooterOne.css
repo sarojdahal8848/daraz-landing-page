@@ -1,0 +1,87 @@
+.footerOne {
+  background-color: #2e2e54;
+  padding: 20px 80px;
+  height: 270px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footerOne__left__linkTwo > h4,
+.footerOne__left__linkOne > h4,
+.footerOne__middle > h4 {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 18px;
+  color: #fff;
+}
+
+.footerOne__left__links {
+  display: flex;
+  flex-direction: column;
+}
+
+.footerOne__left__links > a {
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.footerOne__left__links > a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.footerOne__left__linkTwo {
+  margin-top: 30px;
+}
+
+.footerOne__middle {
+  margin-top: 30px;
+  flex: 0.2;
+}
+
+.footerOne__last {
+  flex: 0.5;
+}
+
+.footerOne__last__generalLogo {
+  display: flex;
+  align-items: flex-end;
+}
+
+.footerOne__last__generalLogo__darazLogo > img {
+  width: 40px;
+}
+
+.footerOne__last__generalLogo__darazLogo {
+  margin-left: 10px;
+}
+
+.footerOne__last__generalLogo__darazLogo > p {
+  font-size: 14px;
+  color: #fff;
+  line-height: 1;
+  margin: 2px auto;
+}
+
+.footerOne__last__generalLogo__darazLogo__redText {
+  color: #f57224 !important;
+}
+
+.footerOne__last__generalLogo > img {
+  width: 100px;
+  height: 100px;
+  border-radius: 15px;
+}
+
+.footerOne__last__share {
+  margin-top: 20px;
+}
+
+.footerOne__last__share > img {
+  margin-right: 10px;
+}
+
+.footerOne__last__share > img:hover {
+  cursor: pointer;
+}

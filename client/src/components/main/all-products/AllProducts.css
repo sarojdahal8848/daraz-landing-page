@@ -1,0 +1,7 @@
+.allProducts {
+  padding: 10px 80px;
+}
+
+.allProducts > h3 {
+  font-size: 24px;
+}

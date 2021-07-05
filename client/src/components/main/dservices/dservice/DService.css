@@ -1,0 +1,35 @@
+.dService {
+  background-color: white;
+  display: flex;
+  width: 19%;
+  padding: 5px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.dService__branding > img {
+  width: 30px;
+  margin-right: 10px;
+}
+
+.dService__icon {
+  color: white;
+}
+
+.dService:hover {
+  box-shadow: 0px 3px 8px rgb(100, 100, 100);
+}
+
+.dService__branding > span {
+  font-weight: 500;
+}
+
+.dService:hover .dService__branding > span {
+  color: blue;
+}
+
+.dService:hover .dService__icon {
+  color: blue;
+}
