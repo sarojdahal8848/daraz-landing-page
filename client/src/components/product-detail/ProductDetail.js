@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchSingleProduct } from "../../redux/actions/products.action";
 import Loader from "./../../helper/Loader";
 import ErrorText from "../../helper/ErrorText";
-const BASEURL = "http://localhost:5000/";
+const BASEURL = "https://daraz-clone-server.herokuapp.com/";
 
 const ProductDetail = () => {
   const { id } = useParams();

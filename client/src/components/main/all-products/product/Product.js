@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 import Loader from "../../../../helper/Loader";
 import ErrorText from "../../../../helper/ErrorText";
-const BASEURL = "http://localhost:5000/";
+const BASEURL = "https://daraz-clone-server.herokuapp.com/";
 
 const Product = () => {
   const [visible, setvisible] = useState(6);
