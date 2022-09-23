@@ -12,7 +12,13 @@ const BASEURL = "https://daraz-clone-server.herokuapp.com/";
 const ProductDetail = () => {
   const { id } = useParams();
   const product = useSelector((state) => state.productReducer);
+  const item = !!product && product.item;
+  const { title, description, old_price, stock, discount_percent, image } =
+    item;
   const dispatch = useDispatch();
+
+  console.log(id);
+
   useEffect(() => {
     dispatch(fetchSingleProduct(id));
   }, [dispatch, id]);
@@ -31,8 +37,6 @@ const ProductDetail = () => {
   }
 
   const renderProduct = () => {
-    const { title, image, old_price, discount_percent, description, stock } =
-      product.item;
     if (product.loading) {
       return <Loader />;
     } else if (product.error !== null) {

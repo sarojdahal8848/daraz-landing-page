@@ -15,7 +15,6 @@ const Product = () => {
     setvisible((preValue) => preValue + 6);
   };
   const products = useSelector((state) => state.productReducer);
-  console.log(products);
 
   const dispatch = useDispatch();
   useEffect(() => {
@@ -37,7 +36,7 @@ const Product = () => {
                 product.old_price -
                 product.old_price * product.discount_percent * 0.01;
               return (
-                <div className="product">
+                <div className="product" key={product._id}>
                   <img src={BASEURL + product.image.substring(7)} alt="" />
                   <Link to={`/product/${product._id}`}>
                     <div className="product__textBox">
