@@ -37,7 +37,7 @@ const ProductDetail = () => {
   }
 
   const renderProduct = () => {
-    if (product.loading) {
+    if (product.loading || !item) {
       return <Loader />;
     } else if (product.error !== null) {
       return <ErrorText error="Please try again Later....." />;
