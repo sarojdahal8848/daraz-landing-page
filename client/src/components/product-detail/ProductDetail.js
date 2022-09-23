@@ -15,10 +15,7 @@ const ProductDetail = () => {
   const item = !!product && product.item;
   const dispatch = useDispatch();
 
-  console.log(id);
-
   useEffect(() => {
-    console.log("ehllo");
     dispatch(fetchSingleProduct(id));
   }, [dispatch, id]);
 
@@ -34,8 +31,6 @@ const ProductDetail = () => {
   if (count <= 0) {
     setCount(1);
   }
-
-  console.log("hello", product);
 
   const renderProduct = () => {
     if (product.loading || !product.item) {
