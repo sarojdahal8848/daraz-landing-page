@@ -36,8 +36,10 @@ const ProductDetail = () => {
     setCount(1);
   }
 
+  console.log(!!product);
+
   const renderProduct = () => {
-    if (product.loading || !item) {
+    if (product.loading || !!product === false) {
       return <Loader />;
     } else if (product.error !== null) {
       return <ErrorText error="Please try again Later....." />;
