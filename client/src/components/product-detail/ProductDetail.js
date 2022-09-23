@@ -13,13 +13,12 @@ const ProductDetail = () => {
   const { id } = useParams();
   const product = useSelector((state) => state.productReducer);
   const item = !!product && product.item;
-  const { title, description, old_price, stock, discount_percent, image } =
-    item;
   const dispatch = useDispatch();
 
   console.log(id);
 
   useEffect(() => {
+    console.log("ehllo");
     dispatch(fetchSingleProduct(id));
   }, [dispatch, id]);
 
@@ -36,10 +35,10 @@ const ProductDetail = () => {
     setCount(1);
   }
 
-  console.log(!!product);
+  console.log("hello", product);
 
   const renderProduct = () => {
-    if (product.loading || !!product === false) {
+    if (product.loading || !product.item) {
       return <Loader />;
     } else if (product.error !== null) {
       return <ErrorText error="Please try again Later....." />;
@@ -47,9 +46,9 @@ const ProductDetail = () => {
       return (
         <div className="productDetail">
           <div className="productDetail__card">
-            <img src={BASEURL + image.substring(7)} alt="" />
+            <img src={BASEURL + item?.image.substring(7)} alt="" />
             <div className="productDetail__card__middle">
-              <h4>{title}</h4>
+              <h4>{item.title}</h4>
               <div className="productDetail__card__middle__rating">
                 <div className="productDetail__card__middle__star">
                   ⭐⭐⭐⭐
@@ -62,16 +61,17 @@ const ProductDetail = () => {
               <p className="productDetail__card__middle__price">
                 Rs.
                 {product.discount_percent
-                  ? old_price - old_price * discount_percent * 0.01
-                  : old_price}
+                  ? item.old_price -
+                    item.old_price * item.discount_percent * 0.01
+                  : item.old_price}
               </p>
-              {discount_percent ? (
+              {item.discount_percent ? (
                 <div className="productDetail__card__middle__discount">
                   <p className="productDetail__card__middle__previousPrice">
-                    Rs.{old_price}
+                    Rs.{item.old_price}
                   </p>
                   <p className="productDetail__card__middle__discountPercent">
-                    -{discount_percent}%
+                    -{item.discount_percent}%
                   </p>
                 </div>
               ) : null}
@@ -88,14 +88,14 @@ const ProductDetail = () => {
                   </button>
                 </div>
                 <div className="productDetail__card__middle__remQuantity">
-                  <p>Only {stock} items left</p>
+                  <p>Only {item.stock} items left</p>
                 </div>
               </div>
               <button className="AddToCart">Add to Cart</button>
             </div>
           </div>
           <div className="productDescription__card">
-            <p>{description}</p>
+            <p>{item.description}</p>
           </div>
         </div>
       );

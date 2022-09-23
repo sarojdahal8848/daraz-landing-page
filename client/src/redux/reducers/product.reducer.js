@@ -45,6 +45,7 @@ const productReducer = (state = initialState, action) => {
         ...state,
         loading: false,
         item: action.payload,
+        items: [],
       };
     case FETCH_SINGLE_PRODUCT_FAILURE:
       return {
